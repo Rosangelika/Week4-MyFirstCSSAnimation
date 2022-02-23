@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&family=Pacifico&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #a6ddda;
+    overflow: hidden;
+}
+
+.container{
+    width: 45%;
+    margin: 32px auto;
+    text-align: center;
+}
+
+.header{
+    height: 250px;
+    text-align: center;
+}
+
+.header h1{
+    font-size: 3.5rem;
+    font-family: 'Pacifico', cursive;
+    color: blue;
+    position: relative; /*top-right-botton-left*/
+    animation: header;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    /*animation-iteration-count: infinite;*/
+}
+
+@keyframes header {
+    0% {top: -250px}
+    100% {top: 100px;}
+}
+
+.main{
+    color: darkblue;
+    font-size: 1.5rem;
+    font-family: 'Inconsolata', monospace;
+}
+
+.text-left{
+    position: relative;
+    animation: text-left;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes text-left {
+    0% {left: -1000px;}
+    85% {left: 50px;}
+    100% {left: 0;}
+}
+
+.text-right{
+    position: relative;
+    margin-top: 32px;
+    text-align: right;
+    animation: text-right;
+    animation-duration: 5s;
+}
+
+@keyframes text-right {
+    0% {right: -1000px;}
+    85% {right: 50px;}
+    100% {right: 0;}
+}
+
+.footer{
+    text-align: center;
+}
+
+.footer .btn{
+    opacity: 0;
+    border: 2px solid white;
+    color: white;
+    font-size: 2rem;
+    display: inline-block;
+    margin: 2rem;
+    padding: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    animation: aniBtn;
+    animation-duration: 5s;
+    animation-delay: 4s;
+}
+
+@keyframes aniBtn {
+    0% {opacity: 0;} /*0 - 1*/
+    100% {opacity: 1;}
+}
